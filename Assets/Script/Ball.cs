@@ -19,6 +19,8 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private int point;
 
+    public int Point { get { return point; } set { point = value; } } 
+
     [SerializeField]
     private BallColor color;
 
@@ -30,7 +32,7 @@ public class Ball : MonoBehaviour, IPointerClickHandler
         Debug.Log(point);
         Destroy(gameObject);
         Game_Manager.instance.PlayerScore += point;
-        
+
     }
 
     void Awake()

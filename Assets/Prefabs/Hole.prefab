@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1097192661638477119}
   - component: {fileID: 1946891137226059315}
   - component: {fileID: 5027524366985873100}
+  - component: {fileID: 5555756073318531403}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -106,7 +107,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -114,3 +115,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &5555756073318531403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964701456372368477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087ff43dba9e4034fa06890c33709215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hole

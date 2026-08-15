@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        Ball b = other.GetComponent<Ball>();
+                
+        if (b != null)
+        {
+            if (b.Point == 0)
+            {
+                Game_Manager.instance.ShowString($"Whiteball dropped you Lost");
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Game_Manager.instance.PlayerScore += b.Point;
+                Destroy(b.gameObject);
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }
