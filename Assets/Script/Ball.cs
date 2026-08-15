@@ -28,8 +28,9 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log(point);
-        Game_Manager.instance.PlayerScore += point;
         Destroy(gameObject);
+        Game_Manager.instance.PlayerScore += point;
+        
     }
 
     void Awake()
