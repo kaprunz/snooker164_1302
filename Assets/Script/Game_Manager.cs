@@ -128,4 +128,28 @@ public class Game_Manager : MonoBehaviour
     {
         notiText.text = s;
     }
+
+    public void SaveGame()
+    {
+        StopBall();
+        if (cueBall != null)
+        {
+            playerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.x);
+            playerPrefs.SetFloat("cueBallPosY", cueBall.transform.position.y);
+            playerPrefs.SetFloat("cueBallPosZ", cueBall.transform.position.z);
+            Debug.Log("SAVE");
+
+        }
+    }
+        public void LoadGame()
+    {
+        if (cueBall != null)
+        {
+            playerPrefs.GetFloat("cueBallPosX");
+            playerPrefs.GetFloat("cueBallPosY");
+            playerPrefs.GetFloat("cueBallPosZ");
+            Debug.Log("LOAD");
+
+        }
+    }
 }
