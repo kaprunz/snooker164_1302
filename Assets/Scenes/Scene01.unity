@@ -1735,7 +1735,7 @@ MonoBehaviour:
   xInput: 0
   ballLine: {fileID: 21514590}
   cam: {fileID: 330585543}
-  notiText: {fileID: 0}
+  notiText: {fileID: 1937615153}
 --- !u!1 &1418034225
 GameObject:
   m_ObjectHideFlags: 0
