@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManger;
+using UnityEngine.SceneManagement;
 
 public class Mainmenu : MonoBehaviour
 {
@@ -19,11 +19,11 @@ public class Mainmenu : MonoBehaviour
 
     public void StartNewGame()
     {
-        SceneManger.loadScene("Scene01")
+        SceneManager.LoadScene("Scene01");
     }
 
     public void ExitGame()
     {
-        application.stop()
+        Application.Quit();
     }
 }

@@ -64,9 +64,9 @@ public class Game_Manager : MonoBehaviour
         if (Keyboard.current.backspaceKey.wasPressedThisFrame)
             StopBall();
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-            xInput = -0.1f;
+            xInput = -0.5f;
         else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-            xInput = +0.1f;
+            xInput = +0.5f;
         else
             xInput = 0f;
 
@@ -120,13 +120,21 @@ public class Game_Manager : MonoBehaviour
     public void ShowScoreText(int n)
     {
         playerScore += n;
-        notiText.text = $"Ball Point:{n}\nTotal Score:{PlayerScore}";
-        
+
+        if (notiText != null)
+        {
+            notiText.gameObject.SetActive(true); // Ensure the text object is active
+            notiText.text = $"Ball Point:{n}\nTotal Score:{PlayerScore}";
+        }
     }
 
     public void ShowString(string s)
     {
-        notiText.text = s;
+        if (notiText != null)
+        {
+            notiText.gameObject.SetActive(true); // Ensure the text object is active
+            notiText.text = s;
+        }
     }
 
     public void SaveGame()
@@ -134,9 +142,9 @@ public class Game_Manager : MonoBehaviour
         StopBall();
         if (cueBall != null)
         {
-            playerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.x);
-            playerPrefs.SetFloat("cueBallPosY", cueBall.transform.position.y);
-            playerPrefs.SetFloat("cueBallPosZ", cueBall.transform.position.z);
+            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.x);
+            PlayerPrefs.SetFloat("cueBallPosY", cueBall.transform.position.y);
+            PlayerPrefs.SetFloat("cueBallPosZ", cueBall.transform.position.z);
             Debug.Log("SAVE");
 
         }
@@ -145,9 +153,9 @@ public class Game_Manager : MonoBehaviour
     {
         if (cueBall != null)
         {
-            playerPrefs.GetFloat("cueBallPosX");
-            playerPrefs.GetFloat("cueBallPosY");
-            playerPrefs.GetFloat("cueBallPosZ");
+            PlayerPrefs.GetFloat("cueBallPosX");
+            PlayerPrefs.GetFloat("cueBallPosY");
+            PlayerPrefs.GetFloat("cueBallPosZ");
             Debug.Log("LOAD");
 
         }
