@@ -123,7 +123,7 @@ public class Game_Manager : MonoBehaviour
 
         if (notiText != null)
         {
-            notiText.gameObject.SetActive(true); // Ensure the text object is active
+            notiText.gameObject.SetActive(true); 
             notiText.text = $"Ball Point:{n}\nTotal Score:{PlayerScore}";
         }
     }
@@ -132,7 +132,7 @@ public class Game_Manager : MonoBehaviour
     {
         if (notiText != null)
         {
-            notiText.gameObject.SetActive(true); // Ensure the text object is active
+            notiText.gameObject.SetActive(true); 
             notiText.text = s;
         }
     }
