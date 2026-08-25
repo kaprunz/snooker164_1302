@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 341050106}
   - component: {fileID: 341050105}
   - component: {fileID: 341050104}
+  - component: {fileID: 341050108}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -384,6 +385,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &341050108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341050103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d72fd6b1c3f644691efcee637c438b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::load
+  slider: {fileID: 577595994}
+  waitSeconds: 1
 --- !u!1 &380913149
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4575472, g: 0.9158867, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.25943398, b: 0.3459175, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -811,7 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6104317, g: 0, b: 1, a: 1}
+  m_Color: {r: 0.038892835, g: 0.4339623, b: 0.053189095, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

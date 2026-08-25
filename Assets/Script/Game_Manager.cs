@@ -84,7 +84,7 @@ public class Game_Manager : MonoBehaviour
     private void ShootBall()
     {
         Rigidbody rd = cueBall.GetComponent<Rigidbody>();
-        rd.AddRelativeForce(Vector3.forward*50,ForceMode.Impulse);
+        rd.AddRelativeForce(Vector3.forward*100,ForceMode.Impulse);
 
         ballLine.SetActive(false);
 
@@ -124,7 +124,7 @@ public class Game_Manager : MonoBehaviour
         if (notiText != null)
         {
             notiText.gameObject.SetActive(true); 
-            notiText.text = $"Ball Point:{n}\nTotal Score:{PlayerScore}";
+            notiText.text = $"Ball Point: {n}\nTotal Score: {PlayerScore}";
         }
     }
 
