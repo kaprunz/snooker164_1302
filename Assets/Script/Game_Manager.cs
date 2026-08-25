@@ -158,10 +158,12 @@ public class Game_Manager : MonoBehaviour
     {
         if (cueBall != null)
         {
-            PlayerPrefs.GetFloat("cueBallPosX");
-            PlayerPrefs.GetFloat("cueBallPosY");
-            PlayerPrefs.GetFloat("cueBallPosZ");
-            Debug.Log("LOAD");
+            float x = PlayerPrefs.GetFloat("cueBallPosX");
+            float y = PlayerPrefs.GetFloat("cueBallPosY");
+            float z = PlayerPrefs.GetFloat("cueBallPosZ");
+
+            cueBall.transform.position = new Vector3(x, y, z);
+            Debug.Log("LOAD"); 
 
         }
     }
