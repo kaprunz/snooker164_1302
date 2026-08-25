@@ -52,6 +52,9 @@ public class Game_Manager : MonoBehaviour
         SetBall(BallColor.Black, 7);
 
         CameraBehindCueBall();
+
+        if (Setting.fromSave)
+            LoadGame();
     }
 
     // Update is called once per frame
@@ -69,6 +72,8 @@ public class Game_Manager : MonoBehaviour
             xInput = +0.5f;
         else
             xInput = 0f;
+        if (Keyboard.current.leftShiftKey.isPressed && Keyboard.current.sKey.isPressed)
+            SaveGame();
 
     }
 

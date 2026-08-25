@@ -1,16 +1,7 @@
 using UnityEngine;
 
-public class Setting : MonoBehaviour
+public static class Setting 
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public static bool fromSave;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
