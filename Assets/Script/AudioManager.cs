@@ -47,4 +47,9 @@ public class AudioManager : MonoBehaviour
         if (index < sfx.Length)
             sfx[index].PlayOneShot(sfx[index].clip);
     }
+
+    public void AdjustMasterVolume(float volume)
+    {
+        mixer.SetFloat("master", volume);
+    }
 }
