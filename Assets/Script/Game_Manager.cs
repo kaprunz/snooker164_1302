@@ -1,6 +1,8 @@
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -33,7 +35,6 @@ public class Game_Manager : MonoBehaviour
 
     [SerializeField]
     private TMP_Text notiText;
-
     public static Game_Manager instance;
 
     private void Awake()
@@ -154,7 +155,7 @@ public class Game_Manager : MonoBehaviour
 
         }
     }
-        public void LoadGame()
+    public void LoadGame()
     {
         if (cueBall != null)
         {
@@ -163,8 +164,9 @@ public class Game_Manager : MonoBehaviour
             float z = PlayerPrefs.GetFloat("cueBallPosZ");
 
             cueBall.transform.position = new Vector3(x, y, z);
-            Debug.Log("LOAD"); 
+            Debug.Log("LOAD");
 
         }
     }
+
 }
