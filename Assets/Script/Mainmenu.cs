@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Mainmenu : MonoBehaviour
 {
-
+    [SerializeField]
+    private GameObject adjustPanel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,5 +33,10 @@ public class Mainmenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void showHideAdjustPanel(bool flag)
+    {
+        adjustPanel.SetActive(flag);
     }
 }
