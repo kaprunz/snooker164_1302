@@ -15,10 +15,12 @@ public class Hole : MonoBehaviour
             }
             else
             {
-                
+
                 Game_Manager.instance.ShowScoreText(b.Point);
-                Destroy(b.gameObject);
             }
+            Destroy(b.gameObject);
+            AudioManager.Instance.PlaySFX(1);
+            
         }
     }
 }
